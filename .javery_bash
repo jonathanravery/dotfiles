@@ -1,0 +1,14 @@
+#!/bin/bash
+
+###########################
+# Jon Avery's BASH script #
+###########################
+
+# Make stop ^X instead of ^S so ^S can be used for forward inc. search
+stty stop ^X
+
+# Set the command line editor to VIM
+set -o vi
+
+# Make opening a file to edit the same inside and outside vim
+alias :e='vim'
