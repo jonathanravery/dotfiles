@@ -15,3 +15,5 @@ set -o vi
 
 # Make opening a file to edit the same inside and outside vim
 alias :e='vim'
+
+PS1="[\u@\h \w] "
