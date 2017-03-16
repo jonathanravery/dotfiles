@@ -1,0 +1,21 @@
+// Make tabs multi-row
+.tab-bar {
+  height: auto;
+  flex-wrap: wrap;
+  .tab,
+  .tab.active {
+    flex: 1 0 auto;
+    height: 30px;
+    line-height: 27px;
+  }
+  .tab .title,
+  .tab.active .title {
+    padding-right: 5px;
+    position: relative;
+    top: 1px;
+  }
+  .tab .close-icon,
+  .tab.active .close-icon {
+    line-height: 29px;
+  }
+}
