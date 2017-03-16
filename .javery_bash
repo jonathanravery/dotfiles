@@ -21,18 +21,8 @@ PS1="[\u@\h \w] "
 # Check to see if I have updates that need to be pulled
 DIR="$(dirname "${BASH_SOURCE[0]}")"
 cd $DIR
-UPSTREAM=${1:-'@{u}'}
-LOCAL=$(git rev-parse @)
-REMOTE=$(git rev-parse "$UPSTREAM")
-BASE=$(git merge-base @ "$UPSTREAM")
-
-if [ $LOCAL = $REMOTE ]; then
-	: # Do nothing
-elif [ $LOCAL = $BASE ]; then
-	echo "Need to pull updated dotfiles"
-elif [ $REMOTE = $BASE ]; then
-	echo "Need to push updated dotfiles"
-else
-	echo "Diverged"
+OUT=`git pull --dry-run`
+if [ -n "$OUT" ] ; then
+	echo "Dotfiles have remote changes to pull"
 fi
 cd - 1> /dev/null
