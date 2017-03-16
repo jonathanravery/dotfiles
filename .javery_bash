@@ -29,9 +29,9 @@ BASE=$(git merge-base @ "$UPSTREAM")
 if [ $LOCAL = $REMOTE ]; then
 	: # Do nothing
 elif [ $LOCAL = $BASE ]; then
-	echo "Need to pull"
+	echo "Need to pull updated dotfiles"
 elif [ $REMOTE = $BASE ]; then
-	echo "Need to push"
+	echo "Need to push updated dotfiles"
 else
 	echo "Diverged"
 fi
