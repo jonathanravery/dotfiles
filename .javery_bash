@@ -5,7 +5,7 @@
 ###########################
 
 # Make VIM the default editor
-EDITOR="vim"
+export EDITOR="vim"
 
 # Make stop ^X instead of ^S so ^S can be used for forward inc. search
 stty stop ^X
