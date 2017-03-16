@@ -16,6 +16,7 @@ set -o vi
 # Make opening a file to edit the same inside and outside vim
 alias :e='vim'
 
+# Set prompt
 PS1="[\u@\h \w] "
 
 # Check to see if I have updates that need to be pulled
